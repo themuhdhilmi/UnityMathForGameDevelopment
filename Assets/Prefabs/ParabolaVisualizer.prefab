@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfPoints: 100
   lineRenderer: {fileID: 6008110186287670380}
+  canvasTextGlobalSpacePrefab: {fileID: 8629754920860966911, guid: ce88f9e7e34f73a4db1a2b01474967fb, type: 3}
 --- !u!1 &4959726101003863820
 GameObject:
   m_ObjectHideFlags: 0

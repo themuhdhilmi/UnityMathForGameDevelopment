@@ -24,7 +24,7 @@ public class AdditionManager : MonoBehaviour
 
         buttonAdd.onClick.AddListener(() =>
         {
-            int calculate = Int32.Parse(firstInput.text) - Int32.Parse(secondInput.text);
+            int calculate = Int32.Parse(firstInput.text) + Int32.Parse(secondInput.text);
             if (calculate == 0) return;
 
             GameObject instantiateObject = Instantiate(parabolaVisualizerPrefab, parabolaStart.position, Quaternion.identity);
@@ -32,10 +32,9 @@ public class AdditionManager : MonoBehaviour
 
             Vector3 calculatedVector = new Vector3(calculate, 0, 0);
 
-            parabolaVisualizer.DrawParabola(new Vector3(0,0,0), calculatedVector, 25f);
+            parabolaVisualizer.DrawParabolaWithLocation(new Vector3(0,0,0), calculatedVector, 5f);
 
             instantiatedParabolaPrefabList.Add(instantiateObject);
-
         });
 
         buttonMinus.onClick.AddListener(() =>
@@ -48,7 +47,7 @@ public class AdditionManager : MonoBehaviour
 
             Vector3 calculatedVector = new Vector3(calculate, 0, 0);
 
-            parabolaVisualizer.DrawParabola(new Vector3(0, 0, 0), calculatedVector, 25f);
+            parabolaVisualizer.DrawParabolaWithLocation(new Vector3(0, 0, 0), calculatedVector, 5f);
 
             instantiatedParabolaPrefabList.Add(instantiateObject);
         });
